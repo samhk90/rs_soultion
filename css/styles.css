@@ -1,0 +1,230 @@
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden !important;
+}
+/* Ensure no horizontal scroll due to the navbar */
+body {
+    overflow-x: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Fix navbar width and alignment issues */
+  .navbar {
+    width: 100%;
+    margin: 0;
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+  }
+  
+  .navbar .container {
+    max-width: 100%; /* Ensure container takes full width */
+    padding-left: 1rem; /* Add appropriate padding for content */
+    padding-right: 1rem;
+  }
+  
+  /* Adjust padding for smaller devices */
+  @media (max-width: 576px) {
+    .navbar .container {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  
+  /* Prevent navbar items from extending too far */
+  .navbar-nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center; /* Center-align navbar items on small screens */
+  }
+  
+  .nav-item {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-toggler {
+    margin-right: 0; /* Ensure toggle button doesn't overflow */
+    padding: 0.25rem;
+  }
+  
+header {
+    position: relative;
+    background-image: url('../assets/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+    z-index: 1; /* Ensure the content is above the overlay */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black filter with 50% opacity */
+    z-index: -1; /* Place the overlay behind the content */
+}
+
+/* Transparent Navbar */
+/* Navbar: Initial transparent state */
+#navbar {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar: Scrolled state */
+#navbar.scrolled {
+    background-color: rgb(36, 36, 36) !important;
+}
+
+#navbar a{
+    color: white !important;
+}
+
+.card {
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+footer {
+
+    font-size: 0.9rem;
+}
+#about-us {
+    background-color: #f8f9fa; /* Light gray for a clean look */
+}
+
+#about-us h2 {
+    color: #343a40; /* Dark gray for modern feel */
+}
+
+.card-title {
+    color: #0d6efd; /* Bootstrap primary color */
+}
+
+.list-group-item {
+    border: none;
+    padding-left: 0;
+}
+
+.list-group-item::before {
+    content: "•";
+    color: #0d6efd; /* Bootstrap primary color */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+/* Smooth hover effect for service cards */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Shadow effect for the About section */
+  .shadow-section {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+  }
+/* Achievements Section */
+/* Achievements Section */
+#achievements {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 0;
+  }
+  
+  #achievements .achievement-item {
+    margin-bottom: 30px;
+  }
+  
+  #achievements .achievement-box {
+    background: linear-gradient(135deg, #333, #555);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Fixed height for each achievement box */
+  }
+  
+  #achievements .achievement-box h4 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  #achievements .achievement-box p {
+    color: #bbb;
+    font-size: 1rem;
+  }
+  
+  #achievements .achievement-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #fff, #f1f1f1);
+  }
+  
+  #achievements .achievement-box:hover h4 {
+    color: #000;
+  }
+  
+  #achievements .achievement-box:hover p {
+    color: #333;
+  }
+  
+  #achievements .container {
+    max-width: 1200px;
+  }
+  
+  @media (max-width: 768px) {
+    #achievements .row .col-lg-4 {
+      margin-bottom: 20px;
+    }
+    #achievements .row .col-lg-6 {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  /* Testimonials Section */
+  #testimonials {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  #testimonialCarousel .carousel-item {
+    padding: 2rem;
+  }
+  
+  #testimonialCarousel .carousel-control-prev-icon,
+  #testimonialCarousel .carousel-control-next-icon {
+    background-color: #fff;
+  }
+  
+  /* Optional: Custom styling for text in the Testimonials */
+  #testimonials .fs-4 {
+    font-style: italic;
+  }
+  
+  #testimonials h5 {
+    font-weight: bold;
+    color: #f8f9fa;
+  }
+    
