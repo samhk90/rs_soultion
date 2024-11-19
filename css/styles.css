@@ -9,45 +9,54 @@ body {
     margin: 0 !important;
   }
   
-  /* Fix navbar width and alignment issues */
-  .navbar {
-    width: 100%;
-    margin: 0;
-    padding-left: 0; /* Remove left padding */
-    padding-right: 0; /* Remove right padding */
-  }
-  
+/* Fix navbar width and alignment issues */
+.navbar {
+  width: 100%;
+  margin: 0;
+  padding-left: 0; /* Remove left padding */
+  padding-right: 0; /* Remove right padding */
+  justify-content: space-between !important;
+}
+
+.navbar .container {
+  max-width: 100%; /* Ensure container takes full width */
+  padding-left: 1rem; /* Add appropriate padding for content */
+  padding-right: 1rem;
+}
+
+/* Align navbar items to the right */
+.navbar-nav {
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* Push links to the right */
+  text-align: right; /* Optional: Align text to the right */
+}
+
+.nav-item {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+/* Navbar toggle button adjustments */
+.navbar-toggler {
+  margin-right: 0; /* Ensure toggle button doesn't overflow */
+  padding: 0.25rem;
+}
+
+/* Adjust padding for smaller devices */
+@media (max-width: 576px) {
   .navbar .container {
-    max-width: 100%; /* Ensure container takes full width */
-    padding-left: 1rem; /* Add appropriate padding for content */
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
-  
-  /* Adjust padding for smaller devices */
-  @media (max-width: 576px) {
-    .navbar .container {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-    }
-  }
-  
-  /* Prevent navbar items from extending too far */
+
   .navbar-nav {
-    margin: 0;
-    padding: 0;
-    width: 100%;
     text-align: center; /* Center-align navbar items on small screens */
+    margin-left: 0; /* Reset margin for mobile view */
   }
   
-  .nav-item {
-    margin: 0;
-    padding: 0.5rem 0;
-  }
-  
-  .navbar-toggler {
-    margin-right: 0; /* Ensure toggle button doesn't overflow */
-    padding: 0.25rem;
-  }
+}
+
   
 header {
     position: relative;
